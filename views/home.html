@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<!--Home page contents-->
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="well">
+            <h3>Sef Diagnosis</h3>
+            <p>The Convenience of Self Diagnosis is in reach</p>
+        </div>
+
+
+        <div class="row">
+
+
+            <div ng-controller="ImageSlider">
+                <div class="col-md-9">
+
+                    <div id="slides_control">
+                        <div class="thumbnail">
+                            <carousel interval="myInterval">
+                                <slide ng-repeat="slide in slides" active="slide.active">
+                                    <img class="img-responsive" ng-src="{{IMAGE_LOCATION+slide.image}}" style="max-height:550px">
+                                    <div class="carousel-caption">
+                                        <h4>Slide {{$index+1}}</h4>
+                                        <p>
+                                            <h3>{{slide.desc}}</h3>
+                                        </p>
+                                    </div>
+                        </div>
+                        </slide>
+                        </carousel>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <a href="#respiration" class="">
+                    <div class="thumbnail">
+
+                        <img class="img-responsive" src="./src/images/tools/bp2.jpg">
+                        <div class="caption ">
+                            <p><a href="#blood ">Use a blood pressure monitor, Self Diagnosis analyzes the result</a></p>
+                        </div>
+                </a>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="#nutrition" class="">
+                    <div class="thumbnail ">
+                        <img class="img-responsive" src="./src/images/tools/f.jpg ">
+                        <div class="caption ">
+                            <p><a href="#nutrition ">With self diagnosis, control your weight</a></p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+        <!-- end of the first row-->
+
+
+        <div class="row ">
+            <div class="col-md-3 ">
+                <a href="#information" class="">
+                    <div class="thumbnail ">
+
+                        <img class="img-responsive" src="./src/images/tools/cf.jpg ">
+                        <div class="caption ">
+                            <p><a href="#information ">Learn all about Cystic Fibrosis </a></p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="#information" class="">
+                    <div class="thumbnail ">
+                        <img class="img-responsive" src="./src/images/tools/doc.jpg ">
+                        <div class="caption ">
+                            <p><a href="#information ">Together, we can make a difference </a></p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="#heart" class="">
+                    <div class="thumbnail ">
+
+                        <img class="img-responsive" src="./src/images/tools/bb.jpg ">
+                        <div class="caption ">
+                            <p><a href="#heart ">Help Cystic Fibrosis babies </a></p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#heart" class="">
+                    <div class="thumbnail">
+
+                        <img class="img-responsive" src="./src/images/tools/h.jpeg ">
+                        <div class="caption ">
+                            <p><a href="#add ">Analyze heart and respiration rate </a></p>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end of the second row-->
+
+
+    </div>
+    <!-- end of the main container-->
+
+
+
+
+</body>
+
+</html>

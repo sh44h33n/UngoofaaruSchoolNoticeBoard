@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html ng-app="UngoofaaruSchool">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ungoofaaru School Notice Board</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="./components/bootstrap.min.css">
+
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+
+    <script type="text/javascript" src="./components/angular.min.js"></script>
+    <script data-require="ui-bootstrap@0.5.0" data-semver="0.5.0" src="./components/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="./components/angular-ui-router.js"></script>
+
+    <script src="./src/app/app.js"></script>
+    <style>
+        div.navbar-collapse.collapse {
+            display: block;
+            overflow: hidden;
+            max-height: 0px;
+            -webkit-transition: max-height .3s ease;
+            -moz-transition: max-height .3s ease;
+            -o-transition: max-height .3s ease;
+            transition: max-height .3s ease;
+        }
+        
+        div.navbar-collapse.collapse.in {
+            max-height: 3000px;
+        }
+    </style>
+    <style>
+        .marquee {
+            width: 100%;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            /* show the marquee just outside the paragraph */
+            animation: marquee 15s linear infinite;
+        }
+        
+        .marquee span:hover {
+            animation-play-state: paused
+        }
+        /* Make it move */
+        
+        @keyframes marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+    </style>
+    <style>
+        .revmarquee {
+            width: 100%;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        .revmarquee span {
+            display: inline-block;
+            padding-left: 100%;
+            /* show the marquee just outside the paragraph */
+            animation: revmarquee 15s linear infinite;
+        }
+        
+        .revmarquee span:hover {
+            animation-play-state: paused
+        }
+        /* Make it move */
+        
+        @keyframes revmarquee {
+            0% {
+                transform: translate(0, 0);
+            }
+            1% {
+                transform: translate(-100%, 0);
+            }
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: mvwaheed;
+            src: url(./fonts/MV_Waheed.otf);
+        }
+        
+        dhivehi {
+            font-family: mvwaheed;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <ul class="dropdown-menu">
+                <li role="separator" class="divider"></li>
+                <li><a href="#nutrition" ng-click="navCollapsed = !navCollapsed">Nutrition Control</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#heart" ng-click="navCollapsed = !navCollapsed">Heart rate & Respiration Analyzer</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#blood" ng-click="navCollapsed = !navCollapsed">Blood Pressure Analyzer</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#dietlog" ng-click="navCollapsed = !navCollapsed">Know your foods</a></li>
+                <li role="separator" class="divider"></li>
+
+            </ul>
+
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="#brand">Ungoofaaru School Online Noticeboard</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="#information" ng-click="navCollapsed = !navCollapsed">Setting</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- ui Views-->
+
+
+    <div class="container-fluid" style="padding-left: 5px" style="padding-right: 5px">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div ui-view="schoollogo"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div ui-view="schoolmoto"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div ui-view="currentdate"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div ui-view="occasionallogo"></div>
+            </div>
+        </div>
+
+
+        <div class="row" style="height:40%; display: block;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div ui-view="schoolnotice"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div ui-view="schoolvideo"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div ui-view="dhivehiscroller"></div>
+                <div ui-view="englishscroller"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
