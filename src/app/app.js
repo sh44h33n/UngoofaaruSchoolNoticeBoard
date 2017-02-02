@@ -13,8 +13,17 @@ app.config(function($stateProvider) {
                     templateUrl: './views/Schoolmoto.html',
                     controller: ''
                 },
+                "words": {
+                    templateUrl: './views/Words.html',
+                    controller: ''
+                },
                 "currentdate": {
                     templateUrl: './views/Currentdate.html',
+                    controller: ''
+
+                },
+                "upcoming": {
+                    templateUrl: './views/Upcoming.html',
                     controller: ''
 
                 },
@@ -54,8 +63,17 @@ app.config(function($stateProvider) {
                     templateUrl: './views/Schoolmoto.html',
                     controller: ''
                 },
+                "words": {
+                    templateUrl: './views/Words.html',
+                    controller: ''
+                },
                 "currentdate": {
                     templateUrl: './views/Currentdate.html',
+                    controller: ''
+
+                },
+                "upcoming": {
+                    templateUrl: './views/Upcoming.html',
                     controller: ''
 
                 },
@@ -92,7 +110,7 @@ app.config(function($stateProvider) {
 
                 },
                 "badge": {
-                    templateUrl: './views/Schoolmoto.html',
+                    templateUrl: './views/Schoollogo.html',
                     controller: ''
                 }
             }
