@@ -109,15 +109,8 @@
         }
         /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
     </style>
-    <style>
-        .my-div {
-            background: red;
-            padding: 1px;
-        }
-    </style>
-    <style>
 
-    </style>
+
 
 
 
@@ -130,7 +123,7 @@
 
 </head>
 
-<body style="padding-left: 5px; padding-right: 5px; padding-bottom:0; padding-top: 0">
+<body>
 
 
     <nav class="navbar navbar-inverse" role="navigation">
@@ -174,7 +167,7 @@
     <!-- ui Views-->
 
 
-    <div class="container-fluid" style="padding-left: 10px; padding-right: 10px; padding-bottom:0; padding-top: 0">
+    <div class="container" style="padding-left: 5px; padding-right: 5px; padding-bottom:0; padding-top: 0">
 
         <div class="row" style="padding: 0px 0px">
             <div class="col-md-2" style="padding: 0px 4px">
@@ -213,46 +206,46 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="container-fluid " style="padding-left: 5px " style="padding-right: 5px ">
 
 
-    </div>
+        <div class="container-fluid " style="padding-left: 5px " style="padding-right: 5px ">
 
 
-    <div class="row no-pad " style="height:40%; display: block; ">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-7 ">
-            <div ui-view="dashboard "></div>
         </div>
 
-    </div>
-    <div class="row no-pad " style="height:40%; display: block;padding: 0 0 ">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-7 ">
-            <div ui-view="reports "></div>
+
+        <div class="row no-pad " style="height:40%; display: block; ">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-7 ">
+                <div ui-view="dashboard "></div>
+            </div>
+
+        </div>
+        <div class="row no-pad " style="height:40%; display: block;padding: 0 0 ">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-7 ">
+                <div ui-view="reports "></div>
+            </div>
+
         </div>
 
-    </div>
 
 
+        <div class="row no-pad " style="height:40%; display: block; ">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-5 col-lg-3 col-lg-offset-8 ">
+                <div ui-view="badge "></div>
+            </div>
 
-    <div class="row no-pad " style="height:40%; display: block; ">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-5 col-lg-3 col-lg-offset-8 ">
-            <div ui-view="badge "></div>
         </div>
 
-    </div>
+        <div class="row no-pad " style="height:40%; display: block; padding: 0 0 ">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-5 col-lg-3 col-lg-offset-8 ">
+                <div ui-view="login "></div>
+            </div>
 
-    <div class="row no-pad " style="height:40%; display: block; padding: 0 0 ">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-5 col-lg-3 col-lg-offset-8 ">
-            <div ui-view="login "></div>
         </div>
 
+
+
     </div>
-
-
-
-
 
 </body>
 
